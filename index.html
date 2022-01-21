@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
@@ -15,150 +19,119 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="user-info">
-      <div class="user">
-        <img src="/images/image-jeremy.png" alt="user profile image">
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
+  <div class="container flex-container">
+    <div class="user-info brd-radius">
+      <div class="user row brd-radius">
+        <div class="row">
+          <img src="/images/image-jeremy.png" alt="user profile image">
+        </div>
+        <div class="user-name">
+          <p class="name-report">Report for</p>
+          <p class="name">Jeremy Robson</p>
+        </div>
       </div>
-      <div>
+      <div class="row frequency">
         <p>Daily</p>
         <p>Weekly</p>
         <p>Monthly</p>
       </div>
     </div>
-    <div class="activities">
-      <div class="activity">
+    <div class="activities grid-container">
+      <div class="activity work brd-radius">
         <div>
           <img src="/images/icon-work.svg" alt="">
         </div>
-        <div>
-          <div>
+        <div class="activity-info brd-radius">
+          <div class="row">
             <p>Work</p>
             <img src="/images/icon-ellipsis.svg" alt="" srcset="">
           </div>
-          <p>32hrs</p>
-          <p>Last week - 36hrs</p>
+          <div class="row">
+            <p class="duration">32hrs</p>
+            <p class="previous-duration">Last week - 36hrs</p>
+          </div>
         </div>
-        <div class="activity">
-          <div>
-            <img src="/images/icon-play.svg" alt="">
+        
+      </div>
+      <div class="activity play brd-radius">
+        <div>
+          <img src="/images/icon-play.svg" alt="">
+        </div>
+        <div class="activity-info brd-radius">
+          <div class="row">
+            <p>Play</p>
+            <img src="/images/icon-ellipsis.svg" alt="" srcset="">
           </div>
-          <div>
-            <div>
-              <p>Play</p>
-              <img src="/images/icon-ellipsis.svg" alt="" srcset="">
-            </div>
-            <p>10hrs</p>
-            <p>Last week - 8hrs</p>
+          <div class="row">
+            <p class="duration">10hrs</p>
+            <p class="previous-duration">Last week - 8hrs</p>
           </div>
-          <div class="activity">
-            <div>
-              <img src="/images/icon-study.svg" alt="">
-            </div>
-            <div>
-              <div>
-                <p>Study</p>
-                <img src="/images/icon-ellipsis.svg" alt="" srcset="">
-              </div>
-              <p>4hrs</p>
-              <p>Last week - 7hrs</p>
-            </div>
-            <div class="activity">
-              <div>
-                <img src="/images/icon-exercise.svg" alt="">
-              </div>
-              <div>
-                <div>
-                  <p>Exercise</p>
-                  <img src="/images/icon-ellipsis.svg" alt="" srcset="">
-                </div>
-                <p>4hrs</p>
-                <p>Last week - 5hrs</p>
-              </div>
-              <div class="activity">
-                <div>
-                  <img src="/images/icon-social.svg" alt="">
-                </div>
-                <div>
-                  <div>
-                    <p>Social</p>
-                    <img src="/images/icon-ellipsis.svg" alt="" srcset="">
-                  </div>
-                  <p>5hrs</p>
-                  <p>Last week - 10hrs</p>
-                </div>
-                <div class="activity">
-                  <div>
-                    <img src="/images/icon-self-care.svg" alt="">
-                  </div>
-                  <div>
-                    <div>
-                      <p>SelfCare</p>
-                      <img src="/images/icon-ellipsis.svg" alt="" srcset="">
-                    </div>
-                    <p>2hrs</p>
-                    <p>Last week - 2hrs</p>
-                  </div>
+        </div>
+      </div>
+      <div class="activity study brd-radius">
+        <div>
+          <img src="/images/icon-study.svg" alt="">
+        </div>
+        <div class="activity-info brd-radius">
+          <div class="row">
+            <p>Study</p>
+            <img src="/images/icon-ellipsis.svg" alt="" srcset="">
+          </div>
+          <div class="row">
+            <p class="duration">4hrs</p>
+            <p class="previous-duration">Last week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="activity exercise brd-radius">
+        <div>
+          <img src="/images/icon-exercise.svg" alt="">
+        </div>
+        <div class="activity-info brd-radius">
+          <div class="row">
+            <p>Exercise</p>
+            <img src="/images/icon-ellipsis.svg" alt="" srcset="">
+          </div>
+          <div class="row">
+            <p class="duration">4hrs</p>
+            <p class="previous-duration">Last week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="activity social brd-radius">
+        <div>
+          <img src="/images/icon-social.svg" alt="">
+        </div>
+        <div class="activity-info brd-radius">
+          <div class="row">
+            <p>Social</p>
+            <img src="/images/icon-ellipsis.svg" alt="" srcset="">
+          </div>
+          <div class="row">
+            <p class="duration">5hrs</p>
+            <p class="previous-duration">Last week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="activity self-care brd-radius">
+        <div>
+          <img src="/images/icon-self-care.svg" alt="">
+        </div>
+        <div class="activity-info brd-radius">
+          <div class="row">
+            <p>SelfCare</p>
+            <img src="/images/icon-ellipsis.svg" alt="" srcset="">
+          </div>
+          <div class="row ">
+            <p class="duration">2hrs</p>
+            <p class="previous-duration">Last week - 2hrs</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+ 
 
   
   <div class="attribution">
@@ -167,3 +140,58 @@
   </div>
 </body>
 </html>
+
+Report for
+Jeremy Robson
+
+Daily
+Weekly
+Monthly
+
+Work
+5hrs <!-- daily -->
+Previous - 7hrs <!-- daily -->
+32hrs <!-- weekly -->
+Previous - 36hrs <!-- weekly -->
+103hrs <!-- monthly -->
+Previous - 128hrs <!-- monthly -->
+
+Play
+1hr <!-- daily -->
+Previous - 2hrs <!-- daily -->
+10hrs <!-- weekly -->
+Previous - 8hrs <!-- weekly -->
+23hrs <!-- monthly -->
+Previous - 29hrs <!-- monthly -->
+
+Study
+0hrs <!-- daily -->
+Previous - 1hr <!-- daily -->
+4hrs <!-- weekly -->
+Previous - 7hrs <!-- weekly -->
+13hrs <!-- monthly -->
+Previous - 19hrs <!-- monthly -->
+
+Exercise
+1hr <!-- daily -->
+Previous - 1hr <!-- daily -->
+4hrs <!-- weekly -->
+Previous - 5hrs <!-- weekly -->
+11hrs <!-- monthly -->
+Previous - 18hrs <!-- monthly -->
+
+Social
+1hr <!-- daily -->
+Previous - 3hrs <!-- daily -->
+5hrs <!-- weekly -->
+Previous - 10hrs <!-- weekly -->
+21hrs <!-- monthly -->
+Previous - 23hrs <!-- monthly -->
+
+Self Care
+0hrs <!-- daily -->
+Previous - 1hr <!-- daily -->
+2hrs <!-- weekly -->
+Previous - 2hrs <!-- weekly -->
+7hrs <!-- monthly -->
+Previous - 11hrs monthly
