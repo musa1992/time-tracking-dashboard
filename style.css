@@ -35,6 +35,14 @@ body {
 
 .container {
     padding: 4em 1em;
+    display: grid;
+    column-gap: 1em;
+    
+}
+
+.container > * {
+   
+    margin-bottom: 1.5em;
 }
 
 .inner-container {
@@ -52,7 +60,7 @@ body {
 
 .user-info {
     background-color: var(--clr-blue--500);
-   
+    grid-row: span 2;   
 }
 
 .user {
@@ -88,17 +96,18 @@ body {
 }
 
 /** activity cards**/
-.activities{
+/* .activities{
     padding-top: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
-}
+} */
 .activity{
     display: flex;
     position: relative;
     overflow: hidden;
     width: 100%;
+    cursor: pointer;
     
 }
 .activity >:nth-child(1){
@@ -129,6 +138,10 @@ body {
 
 }
 
+.activity-info >:nth-child(1) > img:hover {
+    color: white;
+}
+
 .duration {
     font-size: 1.8rem;
     font-weight: 300;
@@ -136,6 +149,13 @@ body {
 .previous-duration{
     font-size: .7em;
     color: var(--clr-blue--100);
+}
+.frequency{
+    cursor: pointer;
+}
+
+.frequency > *:hover{
+    color: white;
 }
 
 .work{
@@ -160,8 +180,9 @@ body {
 
 @media(min-width: 992px){
     .container {
-        width: 80%;
-        margin-inline: auto;  
+        width: 60%;
+        margin-inline: auto; 
+        grid-template-columns: repeat(4,1fr); 
     }
     .flex-container {
         display: flex;
@@ -174,10 +195,10 @@ body {
         
     }
 
-    .user-info{
+    /* .user-info{
         max-width: 200px;
 
-    }
+    } */
    
     .user{
         flex-direction: column;
@@ -196,14 +217,14 @@ body {
         flex-direction: column;
     }
     .frequency > * + *{
-        margin-top: 1em;
+        margin-top: .5em;
     }
 
-    .activities {
+    /* .activities {
         padding-top: 0;
         margin-left: 1em;
        
-    }
+    } */
 
     .activity-info >:nth-child(2){
         flex-direction: column;
